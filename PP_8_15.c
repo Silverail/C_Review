@@ -17,8 +17,11 @@ int main()
 
 	for (int i = 0;i < (int)sizeof(mes_code);i++)
 	{
-		mes_code[i] = ((mes_code[i] - 'a') + shift_amount) % 26 + 'a';
-		if (mes_code[i] < 'a' || mes_code[i] >'z') mes_code[i] = ' ';
+		if ((mes_code[i] >= 'A' && mes_code[i] <= 'Z')||(mes_code[i] >= 'a' && mes_code[i] <= 'z' ))
+		{
+			mes_code[i] = ((mes_code[i] - 'a') + shift_amount) % 26 + 'a';
+		}
+		
 	}
 
 	printf("Encrypted message: ");
