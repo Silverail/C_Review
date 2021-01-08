@@ -6,11 +6,15 @@ int main()
 	int shift_amount = 0;
 	int i = 0;
 	printf("Enter message to be encrypted: ");
-	while (mes_code[i-1] != '\n')
+	do
 	{
 		mes_code[i] = getchar();
-		i++;
-	}
+	} while (mes_code[i++] != '\n');
+	//while (mes_code[i-1] != '\n')
+	//{
+	//	mes_code[i] = getchar();
+	//	i++;
+	//}
 	printf("Enter shift amount (1-25): ");
 
 	scanf_s("%d", &shift_amount);
